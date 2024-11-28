@@ -3,11 +3,44 @@
     padding: 0;
 }
 
-body {
-    background-color: coral;
+html {
+    background: linear-gradient(to bottom right, coral, beige);
+    height: 100vh;
 }
 
 nav {
     text-align: center;
-    font-size: xx-large;
+    font-size: 5vw;
+    margin-top: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5vw;
+    animation: idle 4s ease infinite;
+    text-shadow: 1px 1px 8px black;
+}
+
+@keyframes idle {
+    0% {
+        letter-spacing: 0.5vw;
+    }
+
+    30% {
+        letter-spacing: 1.5vw;
+        text-shadow: 2px 2px 8px black;
+    }
+
+    60% {
+        letter-spacing: 1.5vw;
+        text-shadow: 2px 2px 8px black;
+    }
+
+    100% {
+        letter-spacing: 0.5vw;
+        text-shadow: 1px 1px 8px black;
+    }
+}
+
+@media screen and (max-width: 795px) {
+    nav {
+        font-size: 9vw;
+    }
 }
